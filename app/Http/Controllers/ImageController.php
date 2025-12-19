@@ -10,7 +10,7 @@ class ImageController extends Controller
     public function index()
     {
         $images = Image::latest()->get();
-        return view('images.index', compact('images'));
+        return view('dashboard.main', compact('images'));
     }
 
     public function show(Image $image)
