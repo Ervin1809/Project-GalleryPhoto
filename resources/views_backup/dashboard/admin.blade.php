@@ -9,7 +9,7 @@
         @foreach ($images as $image)
             <div class="bg-white rounded shadow overflow-hidden">
                 <img
-                    src="{{ asset('storage/app/public' . $image->file_low_res) }}"
+                    src="{{ asset('storage/' . $image->file_low_res) }}"
                     alt="{{ $image->title }}"
                     class="w-full h-48 object-cover"
                 >

@@ -11,6 +11,9 @@ class ImageController extends Controller
     public function index()
     {
         $images = Image::latest()->get();
+        if (!Auth::check()){
+            return view('dashboard.main', compact('images'));
+        }
 
         if (Auth::user()->role == UserRole::ADMIN) {
             return view('dashboard.admin', compact('images'));

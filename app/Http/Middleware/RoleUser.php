@@ -17,7 +17,7 @@ class RoleUser
         }
 
         // cocokkan enum dengan parameter route
-        if (Auth::user()->role->value !== $role) {
+        if (Auth::user()->role !== $role) {
             abort(403, 'Akses terbatas');
         }
 

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('file_low_res')->nullable();
             $table->string('file_high_res')->nullable();
+            $table->text('description')->nullable();
+            $table->foreignId('uploaded_by')->nullable()->constrained('users')->onDelete('set null');
             $table->timestamps();
         });
     }

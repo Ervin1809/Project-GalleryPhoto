@@ -2,14 +2,14 @@
 
 @section('content')
     <h1 class="text-2xl font-bold mb-6">
-        Galeri Foto Admin
+        Galeri Foto User
     </h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         @foreach ($images as $image)
             <div class="bg-white rounded shadow overflow-hidden">
                 <img
-                    src="{{ asset('storage/app/public' . $image->file_low_res) }}"
+                    src="{{ asset('storage/' . $image->file_low_res) }}"
                     alt="{{ $image->title }}"
                     class="w-full h-48 object-cover"
                 >
