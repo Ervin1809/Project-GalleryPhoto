@@ -1,3 +1,98 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Photography Portfolio Styles */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased;
+    }
+}
+
+@layer components {
+
+    /* Primary Button */
+    .btn-primary {
+        @apply bg-warm-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-warm-600 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+    }
+
+    /* Secondary Button */
+    .btn-secondary {
+        @apply bg-white text-warm-700 border-2 border-warm-500 px-6 py-3 rounded-lg font-semibold hover:bg-warm-50 transition-all duration-300 ease-in-out;
+    }
+
+    /* Outline Button */
+    .btn-outline {
+        @apply bg-transparent text-warm-700 border border-warm-300 px-6 py-3 rounded-lg font-medium hover:bg-warm-50 hover:border-warm-400 transition-all duration-300;
+    }
+
+    /* Card Component */
+    .card {
+        @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300;
+    }
+
+    /* Input Field */
+    .input-field {
+        @apply w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-warm-300 focus:border-warm-400 transition-all duration-200 bg-white;
+    }
+
+    /* Gallery Image Card */
+    .gallery-card {
+        @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+    }
+
+    /* Badge Styles */
+    .badge-unlocked {
+        @apply bg-sage-400 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg;
+    }
+
+    .badge-locked {
+        @apply bg-warm-300 text-warm-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg;
+    }
+}
+
+@layer utilities {
+
+    /* Custom Scrollbar */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f8f8f8;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #909E84;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #75654C;
+    }
+
+    /* Firefox scrollbar */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #909E84 #f8f8f8;
+    }
+
+    /* Soft overlay for images */
+    .image-overlay {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
+    }
+
+    /* Subtle gradient backgrounds */
+    .gradient-warm {
+        background: linear-gradient(135deg, #fdf8f4 0%, #faf0e6 100%);
+    }
+
+    .gradient-hero {
+        background: linear-gradient(135deg, #fdf8f4 0%, #f5e1cd 50%, #f4f6f4 100%);
+    }
+}

@@ -10,7 +10,9 @@ class ImageController extends Controller
 {
     public function index()
     {
-        $images = Image::latest()->get();
+        $images = Image::with('reviews.user')
+            ->latest()
+            ->paginate(25);
         if (!Auth::check()){
             return view('dashboard.main', compact('images'));
         }
